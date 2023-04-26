@@ -59,7 +59,7 @@ export default {
         .my-card{
             padding: 50px;
             width: 32%;
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 10px;
             margin-top: 30px;
         }
