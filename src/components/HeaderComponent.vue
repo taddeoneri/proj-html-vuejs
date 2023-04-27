@@ -1,41 +1,50 @@
 <template>
     <header>
-        <div class="container d-flex justify-content-between align-items-center py-3">
-            <div>
-                <p><i class="fas fa-clock"></i>Open Hours: Mon - Sat - 9:00 - 18:00</p>
+        <section class="header-top">
+            <div class="container d-flex justify-content-between align-items-center py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <i class="fas fa-clock"></i>
+                    <p>Open Hours: Mon - Sat - 9:00 - 18:00</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+1 (305) 1234-5678</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <i class="fas fa-envelope"></i>
+                        <p>hello@example.com</p>
+                    </div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <p><i class="fas fa-phone-alt"></i>+1 (305) 1234-5678</p>
-                <p><i class="fas fa-envelope"></i>hello@example.com</p>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-linkedin-in"></i>
+        </section>
+        <section class="header-bottom">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="box-image">
+                    <img src="../assets/image/logo.PNG" alt="Logo">
+                </div>
+                <ul class="d-flex m-0">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Results</a></li>
+                </ul>
             </div>
-        </div>
+            <div class="jumbo d-flex flex-column align-items-center justify-content-center">
+                <img src="../assets/image/bg-parallax.png" alt="Jumbo"> 
+                <h2>Ready <span class="p-2">Team</span></h2>
+                <p>No matter what your company needs, we will be ready to assist you in the best possibile way.</p>
+                <div class="d-flex justify-content-center">
+                    <button class="btn text-uppercase">Get in touch</button>
+                    <button class="btn text-uppercase">Read more</button>
+                </div>
+            </div>
+        </section>
     </header>
-    <section>
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="box-image">
-                <img src="../assets/image/logo.PNG" alt="Logo">
-            </div>
-            <ul class="d-flex m-0">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Results</a></li>
-            </ul>
-        </div>
-        <div class="jumbo d-flex flex-column align-items-center justify-content-center">
-            <img src="../assets/image/bg-parallax.png" alt="Jumbo"> 
-            <h2>Ready <span class="p-2">Team</span></h2>
-            <p>No matter what your company needs, we will be ready to assist you in the best possibile way.</p>
-            <div class="d-flex justify-content-center">
-                <button class="btn text-uppercase">Get in touch</button>
-                <button class="btn text-uppercase">Read more</button>
-            </div>
-        </div>
-    </section>
 </template>
 
 <script>
@@ -45,9 +54,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    header{
-        background-color: #0d1b24;
+    .header-top{
+        background-color: #21333e;
         color: #fff;
+        p{
+            padding: 0px 35px 0px 10px;
+        }
+        .fa-twitter, .fa-facebook-f{
+            padding-right: 35px;
+        }
     }
     p{
         margin: 0;
@@ -72,10 +87,11 @@ export default {
         height: 600px;
         text-align: center;
         position: relative;
+        overflow: hidden;
         img{
             width: 100%;
-            height: 100%;
             position: absolute;
+            transform: scale(1.8);
         }
         h2{
             color: #606d75;

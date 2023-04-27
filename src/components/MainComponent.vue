@@ -20,7 +20,7 @@
         </div>
     </section>
     <section class="company">
-        <div class="d-flex align-items-center container">
+        <div class="container d-flex align-items-center">
             <div class="box-left">
                 <h4 class="text-uppercase">About the network</h4>
                 <h2><span>The</span> Company</h2>
@@ -63,21 +63,21 @@
             <div class="container">
                 <h4 class="text-uppercase text-center">What are we doing</h4>
                 <h2 class="text-center"><span>Results</span> in Numbers</h2>
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="px-5 d-flex justify-content-between align-items-center">
                     <div class="text-center">
-                        <p>128</p>
+                        <p class="number">128</p>
                         <p>Certifications</p>
                     </div>
                     <div class="text-center">
-                        <p>230</p>
+                        <p class="number">230</p>
                         <p>Employees</p>
                     </div>
                     <div class="text-center">
-                        <p>517</p>
+                        <p class="number">517</p>
                         <p>Customers</p>
                     </div>
                     <div class="text-center">
-                        <p>94</p>
+                        <p class="number">94</p>
                         <p>Countries Served</p>
                     </div>
                 </div>
@@ -147,15 +147,42 @@ export default {
             text-decoration: none;
         }
     }
+    h2{
+        color: #21333e;
+        font-weight: 700;
+        font-size: 2.8rem;
+    }
+    h4{
+        color: #14a7a7;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    span{
+        background-color: #d5e7e8;
+        color: #058283;
+        padding: 6px 12px;
+
+        border-radius: 5px;
+    }
+    p{
+        color: #879197;
+    }
     .main-service{
         background-color: #eef4ed;
-        padding: 100px 0px;
+        padding: 140px 0px;
         .my-card{
             padding: 50px;
             width: 32%;
             background-color: #ffffff;
             border-radius: 10px;
             margin-top: 30px;
+            i{
+                font-size: 1.7rem;
+                color: #87c4c4;
+            }
+            h3{
+                padding: 23px 0px;
+            }
         }
         p{
             margin: 0;
@@ -166,9 +193,6 @@ export default {
         h2{
             padding: 50px 0px 30px 0px;
         }
-        h3{
-            padding: 15px 0px;
-        }
     }
     .box-left, .box-right{
         width: 50%;
@@ -176,14 +200,45 @@ export default {
     .company{
         color: #fff;
         background-color: #111117;
+        h2{
+            padding: 30px 0px;
+            color: #fff
+        }
+        span{
+            color: #fff;
+            background-color: #0e272d;
+        }
+        p{
+            padding-bottom: 40px;
+            margin: 0;
+        }
         .my-card{
             width: 48%;
+            padding: 14px 0px;
+            h3{
+                padding-bottom: 10px;
+            }
         }
         .box-left{
             padding-right: 50px;
         }
+        .box-right{
+            img{
+                width: 100%;
+            }
+        }
     }
     .projects{
+        padding: 140px 0px;
+        ul{
+            padding: 6px 140px;
+        }
+        h2{
+            padding: 30px 0px 50px 0px;
+        }
+        a{
+            color: #879197;;
+        }
         .my-card{
             width: 31%;
             border-radius: 10px;
@@ -192,7 +247,7 @@ export default {
             overflow: hidden;
             img{
                 width: 100%;
-                opacity: .7;
+                filter: brightness(50%);
             }
             p{
                 position: absolute;
@@ -202,26 +257,46 @@ export default {
                 color: #fff;
                 text-align: center;
                 font-size: 1.6rem;
+                padding-bottom: 30px;
             }
         }
     }
     .results{
-        margin: 100px 0px;
         color: #fff;
         .results-top{
-            padding: 100px 0px;
+            padding: 120px 0px;
             background-image: url('../assets/image/bg-7.jpg');
+            background-size: cover;
+            background-position: center;
             h2{
                 padding: 20px 0px 80px 0px;
+                color: #fff;
+            }
+            span{
+                color: #fff;
+                background-color: #0e272d;
+            }
+            .number{
+                font-size: 2rem;
+                color: #14a7a7;
+                font-weight: 700;
+                padding-bottom: 8px;
+            }
+            p{
+                font-size: 1.3rem;
+                color: #fff;
+                margin: 0;
+                font-weight: 700;
             }
         }
         .results-bottom{
             padding: 100px 0px;
+            background-color: #111117;
             .box-image{
                 width: 100px;
                 img{
                     width: 100%;
-                    opacity: .4;
+                    opacity: 1;
                 }
             }
         }
