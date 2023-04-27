@@ -10,11 +10,11 @@
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="my-card" v-for="(card, index) in store.cards">
                     <div class="d-flex justify-content-between">
-                        <img :src="'/images/'+store.cards[index].icon" alt="">
+                        <img :src="'/images/'+card.icon" alt="">
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                    <h3>{{store.cards[index].name}}</h3>
-                    <p>{{store.cards[index].par}}</p>
+                    <h3>{{card.name}}</h3>
+                    <p>{{card.par}}</p>
                 </div>
             </div>
         </div>
@@ -27,8 +27,8 @@
                 <p>For 12 years we have been providing audit and warranty, financial advice, eisk advice, taxes and related services to select clients.</p>
                 <div class="d-flex justify-content-between flex-wrap">
                     <div class="my-card" v-for="(item, index) in store.company">
-                        <h3>{{store.company[index].title}}</h3>
-                        <p>{{store.company[index].par}}</p>
+                        <h3>{{item.title}}</h3>
+                        <p>{{item.par}}</p>
                     </div>
                 </div>
             </div>
@@ -52,8 +52,8 @@
             </ul>
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="my-card" v-for="(card, index) in store.projects">
-                    <img :src="'/images/'+store.projects[index].image" alt="">
-                    <p>{{store.projects[index].text}}</p>
+                    <img :src="'/images/'+card.image" alt="">
+                    <p>{{card.text}}</p>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
         <div class="results-bottom">
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="box-image" v-for="(image, index) in store.resultsImage">
-                    <img :src="'/images/'+store.resultsImage[index]" alt="">
+                    <img class="results-image" :src="'/images/'+image" alt="">
                 </div>
             </div>
         </div>
@@ -94,10 +94,33 @@
     <section class="form">
         <div class="container d-flex justify-content-between">
             <div class="box-left">
-
+                <h4 class="text-uppercase">Send a message</h4>
+                <h2>Get in <span>Touch</span></h2>
+                <p>We will respond to your message as soon as possibile</p>
+                <form>
+                    <div class="d-flex justify-content-between">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <input type="number" placeholder="Name">
+                        <input type="text" placeholder="More Info">
+                    </div>
+                    <input class="textarea" type="text" placeholder="Message">
+                    <button type="submit" class="text-uppercase">Send</button>
+                </form>
             </div>
             <div class="box-right">
-
+                <h3>Example Inc.</h3>
+                <p>Lorem ipsum solor sit amet consectetur adipiscing elit.</p>
+                <p>Praesent diam lacus, dapibus sed imperdiet consectetur.</p>
+                <div class="d-flex align-items-center" v-for="(card, index) in store.info">
+                    <div class="box-item d-flex align-items-center justify-content-center">
+                        <i :class="card.item"></i>
+                    </div>
+                    <p class="m-0">{{card.text}}</p>
+                </div>
+                <button class="text-uppercase">View map</button>
             </div>
         </div>
     </section>
@@ -198,12 +221,39 @@ export default {
                 width: 100px;
                 img{
                     width: 100%;
+                    opacity: .4;
                 }
             }
         }
     }
     .form{
-        .box-left
+        .box-left{
+            width: 59%;
+            input{
+                width: 49%;
+                padding: 16px;
+                border-radius: 5px;
+                margin-top: 20px;
+                border: none;
+                background-color: #ececec;
+            }
+            .textarea{
+                width: 100%;
+                padding-bottom: 100px;
+            }
+            button{
+                margin-top: 20px;
+            }
+        }
+        .box-right{
+            width: 39%;
+            .box-item{
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: #daeced;
+            }
+        }
     }
     
 </style>

@@ -89,7 +89,55 @@ export const store = reactive({
         'logo-2.png',
         'logo-3.png',
         'logo-4.png',
+    ],
+    info: [
+        {
+            text: '+1 (305) 1234-5678',
+            item: 'fas fa-phone-alt'
+        },
+        {
+            text: 'hello@example.com',
+            item: 'fas fa-envelope'
+        },
+        {
+            text: 'Main Avenue, 987',
+            item: 'fas fa-map-marker-alt'
+        }
+    ],
+    footer: [
+        {
+            title: 'About',
+            list: [
+                'The Company',
+                'Institutional',
+                'Social & Events',
+                'Innovation',
+                'Enviroment',
+                'Technology'
+            ]
+        },
+        {
+            title: 'Services',
+            list: [
+                'Audit & Assurance',
+                'Financial Advisory',
+                'Analytics M&A',
+                'Middle Marketing',
+                'Legal Consulting',
+                'Regulatory Risk'
+            ]
+        },
+        {
+            title: 'Support',
+            list: [
+                'Responsability',
+                'Terms of Use',
+                'About Cookies',
+                'Privacy Policy',
+                'Accessibility',
+                'Information'
+            ]
+        }
     ]
-
     
 })
