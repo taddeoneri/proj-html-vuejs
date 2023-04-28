@@ -22,26 +22,29 @@
             </div>
         </section>
         <section class="header-bottom">
-            <div class="container d-flex justify-content-between align-items-center">
+            <div class="p-2 container d-flex justify-content-between align-items-center">
                 <div class="box-image">
                     <img src="../assets/image/logo.PNG" alt="Logo">
                 </div>
-                <ul class="d-flex m-0">
+                <ul class="d-flex align-items-center m-0">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Results</a></li>
+                    <li><button class="m-0 text-uppercase">Get in touch</button></li>
                 </ul>
             </div>
             <div class="jumbo d-flex flex-column align-items-center justify-content-center">
-                <img src="../assets/image/bg-parallax.png" alt="Jumbo"> 
-                <h2>Ready <span class="p-2">Team</span></h2>
-                <p>No matter what your company needs, we will be ready to assist you in the best possibile way.</p>
-                <div class="d-flex justify-content-center">
-                    <button class="text-uppercase">Get in touch</button>
-                    <button class="btn text-uppercase">Read more</button>
-                </div>
+                <img src="../assets/image/bg-parallax.png" alt="Jumbo">
+                <div class="my-container">
+                    <h2>Ready <span class="p-2">Team</span></h2>
+                    <p>No matter what your company needs, we will be ready to assist you in the best possibile way.</p>
+                    <div class="d-flex justify-content-center">
+                        <button class="text-uppercase">Get in touch</button>
+                        <button class="btn text-uppercase">Read more</button>
+                    </div>
+                </div> 
             </div>
         </section>
     </header>
@@ -54,9 +57,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    button{
+        background-color: #058283;
+        color: #fff;
+        border-radius: 5px;
+        padding: 8px 18px;
+        font-size: 15px;
+        margin: 0px 12px;
+        border: none;
+    }
+    .btn{
+        background-color: #fff;
+        color: #058283;
+        border: 2px solid #058283;
+    }
     .header-top{
         background-color: #21333e;
-        color: #fff;
+        color: #879197;
         p{
             padding: 0px 35px 0px 10px;
         }
@@ -77,46 +94,43 @@ export default {
         text-transform: uppercase;
     }
     .box-image{
-        width: 200px;
+        width: 140px;
         img{
             width: 100%;
         }
     }
-    .jumbo{
-        width: 100%;
-        height: 600px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
+    .header-bottom{
+        h2{
+            color: #21333e;
+            font-weight: 700;
+            font-size: 3.3rem;
+        }
+        span{
+            background-color: #d5e7e8;
+            color: #058283;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+        .jumbo{
+            width: 100%;
+            height: 600px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            .my-container{
+                width: 400px;
+            }
+            p{
+                padding: 20px 0px 40px 0px;
+            }
         img{
             width: 100%;
             position: absolute;
-            transform: scale(1.8);
-        }
-        h2{
-            color: #606d75;
-            font-size: 2.3rem;
-        }
-        span{
-            color: #00a6a6;
-            background-color: #d9f2f2;
+            transform: scale(1.5);
         }
         p{
             color: #c0c0c0;
         }
-        button{
-            background-color: #058283;
-            color: #fff;
-            border-radius: 5px;
-            padding: 8px 18px;
-            font-size: 15px;
-            margin: 0px 12px;
-            border: none;
-        }
-        .btn{
-            background-color: #fff;
-            color: #058283;
-            border: 2px solid #058283;
-        }
+    }
     }
 </style>

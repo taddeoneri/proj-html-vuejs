@@ -22,21 +22,25 @@
         </div>
     </section>
     <section class="company">
-        <div class="container d-flex align-items-center">
-            <div class="box-left">
-                <h4 class="text-uppercase">About the network</h4>
-                <h2><span>The</span> Company</h2>
-                <p>For 12 years we have been providing audit and warranty, financial advice, eisk advice, taxes and related services to select clients.</p>
-                <div class="d-flex justify-content-between flex-wrap">
-                    <div class="my-card" v-for="(item, index) in store.company">
-                        <h3>{{item.title}}</h3>
-                        <p>{{item.par}}</p>
+        <div class=" d-flex align-items-center">
+            <div class="box-left d-flex justify-content-end">
+                <div class="text">
+                    <h4 class="text-uppercase">About the network</h4>
+                    <h2><span>The</span> Company</h2>
+                    <p>For 12 years we have been providing audit and warranty, financial advice, eisk advice, taxes and related services to select clients.</p>
+                    <div class="d-flex justify-content-between flex-wrap">
+                        <div class="my-card" v-for="(item, index) in store.company">
+                            <i :class="item.icon"></i>
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.par}}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button class="text-uppercase">Get in touch</button>
+                        <button class="btn text-uppercase">Read more</button>
                     </div>
                 </div>
-                <div class="d-flex">
-                    <button class="text-uppercase">Get in touch</button>
-                    <button class="btn text-uppercase">Read more</button>
-                </div>
+                
             </div>
             <div class="box-right">
                 <img src="../assets/image/about-4.jpg" alt="Company">
@@ -112,7 +116,7 @@
                         <input type="number" placeholder="Name">
                         <input type="text" placeholder="More Info">
                     </div>
-                    <input class="textarea" type="text" placeholder="Message">
+                    <textarea class="textarea" type="text" placeholder="Message"></textarea>
                     <button type="submit" class="text-uppercase">Send</button>
                 </form>
             </div>
@@ -167,7 +171,6 @@ export default {
         background-color: #d5e7e8;
         color: #058283;
         padding: 6px 12px;
-
         border-radius: 5px;
     }
     p{
@@ -202,6 +205,9 @@ export default {
             h3{
                 padding: 23px 0px;
             }
+            img{
+                filter: grayscale(100%) brightness(80%) sepia(300%) hue-rotate(50deg) saturate(500%);
+            }
         }
         .par-service{
             width: 70%;
@@ -227,7 +233,6 @@ export default {
     .company{
         color: #fff;
         background-color: #111117;
-        padding: 110px 0px;
         h2{
             padding: 30px 0px;
             color: #fff
@@ -255,6 +260,9 @@ export default {
             .btn{
                 background-color: #111117;
                 color: #fff;
+            }
+            .text{
+                width: 58%;
             }
         }
         .box-right{
@@ -329,6 +337,7 @@ export default {
             background-color: #111117;
             .box-image{
                 width: 100px;
+                height: 20px;
                 img{
                     width: 100%;
                     filter: brightness(250%);
@@ -348,9 +357,14 @@ export default {
                 border: none;
                 background-color: #ececec;
             }
-            .textarea{
+            textarea{
                 width: 100%;
-                padding-bottom: 100px;
+                height: 140px;
+                padding: 16px;
+                border-radius: 5px;
+                margin-top: 20px;
+                border: none;
+                background-color: #ececec;
             }
             button{
                 margin-top: 20px;

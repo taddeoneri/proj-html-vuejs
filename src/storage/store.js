@@ -36,22 +36,22 @@ export const store = reactive({
     ],
     company: [
         {
-            icon: '',
+            icon: 'far fa-lock-alt',
             title: 'Tradition',
             par: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.'
         },
         {
-            icon: '',
+            icon: 'far fa-lock-alt',
             title: 'Security',
             par: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.'
         },
         {
-            icon: '',
+            icon: 'far fa-edit',
             title: 'Certificate',
             par: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.'
         },
         {
-            icon: '',
+            icon: 'far fa-graduation-cap',
             title: 'Expertise',
             par: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.'
         },
