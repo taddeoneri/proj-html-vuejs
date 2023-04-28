@@ -39,7 +39,7 @@
                 <h2>Ready <span class="p-2">Team</span></h2>
                 <p>No matter what your company needs, we will be ready to assist you in the best possibile way.</p>
                 <div class="d-flex justify-content-center">
-                    <button class="btn text-uppercase">Get in touch</button>
+                    <button class="text-uppercase">Get in touch</button>
                     <button class="btn text-uppercase">Read more</button>
                 </div>
             </div>
@@ -103,6 +103,20 @@ export default {
         }
         p{
             color: #c0c0c0;
+        }
+        button{
+            background-color: #058283;
+            color: #fff;
+            border-radius: 5px;
+            padding: 8px 18px;
+            font-size: 15px;
+            margin: 0px 12px;
+            border: none;
+        }
+        .btn{
+            background-color: #fff;
+            color: #058283;
+            border: 2px solid #058283;
         }
     }
 </style>

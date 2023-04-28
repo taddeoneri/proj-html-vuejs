@@ -16,7 +16,7 @@
                     </div>
                     <div v-for="(item, index) in store.footer" class="my-card">
                         <h3>{{item.title}}</h3>
-                        <ul>
+                        <ul class="p-0 m-0">
                             <li v-for="(listItem, index) in item.list">{{ listItem }}</li>
                         </ul>
                     </div>
@@ -47,6 +47,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    p, li{
+        color: #879197;
+        list-style: none;
+    }
     .footer-top{
         padding: 100px 0px;
         background-color: #111117;
@@ -57,12 +61,18 @@ export default {
         .my-card{
             background-color: #19191f;
         }
+        h3{
+            color: #fff;
+        }
     }
     .footer-bottom{
         background-color: #0d0d11;
         p{
             margin: 0;
             padding: 30px 0px;
+        }
+        span{
+            color: #058283;
         }
     }
 </style>

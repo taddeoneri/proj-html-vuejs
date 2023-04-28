@@ -4,8 +4,10 @@
             <h4 class="text-uppercase">Out business areas</h4>
             <h2>Excellence in <span>Services</span></h2>
             <div class="d-flex justify-content-between align-items-center">
-                <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.</p>
-                <button class="btn text-uppercase">See all</button>
+                <p class="par-service">We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.</p>
+                <div class="btn-service">
+                    <button class="text-uppercase">See all</button>
+                </div>
             </div>
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="my-card" v-for="(card, index) in store.cards">
@@ -30,6 +32,10 @@
                         <h3>{{item.title}}</h3>
                         <p>{{item.par}}</p>
                     </div>
+                </div>
+                <div class="d-flex">
+                    <button class="text-uppercase">Get in touch</button>
+                    <button class="btn text-uppercase">Read more</button>
                 </div>
             </div>
             <div class="box-right">
@@ -114,13 +120,13 @@
                 <h3>Example Inc.</h3>
                 <p>Lorem ipsum solor sit amet consectetur adipiscing elit.</p>
                 <p>Praesent diam lacus, dapibus sed imperdiet consectetur.</p>
-                <div class="d-flex align-items-center" v-for="(card, index) in store.info">
+                <div class="info d-flex align-items-center" v-for="(card, index) in store.info">
                     <div class="box-item d-flex align-items-center justify-content-center">
                         <i :class="card.item"></i>
                     </div>
                     <p class="m-0">{{card.text}}</p>
                 </div>
-                <button class="text-uppercase">View map</button>
+                <button class="btn my-2 text-uppercase">View map</button>
             </div>
         </div>
     </section>
@@ -167,6 +173,19 @@ export default {
     p{
         color: #879197;
     }
+    button{
+        background-color: #058283;
+        color: #fff;
+        border-radius: 5px;
+        padding: 8px 18px;
+        font-size: 15px;
+        border: none;
+        }
+    .btn{
+        background-color: #fff;
+        color: #058283;
+        border: 2px solid #058283;
+    }
     .main-service{
         background-color: #eef4ed;
         padding: 140px 0px;
@@ -184,6 +203,14 @@ export default {
                 padding: 23px 0px;
             }
         }
+        .par-service{
+            width: 70%;
+            padding-bottom: 30px;
+        }
+        .btn-service{
+            width: 10%;
+            
+        }
         p{
             margin: 0;
         }
@@ -200,6 +227,7 @@ export default {
     .company{
         color: #fff;
         background-color: #111117;
+        padding: 110px 0px;
         h2{
             padding: 30px 0px;
             color: #fff
@@ -221,6 +249,13 @@ export default {
         }
         .box-left{
             padding-right: 50px;
+            button{
+                margin-right: 25px;
+            }
+            .btn{
+                background-color: #111117;
+                color: #fff;
+            }
         }
         .box-right{
             img{
@@ -296,12 +331,13 @@ export default {
                 width: 100px;
                 img{
                     width: 100%;
-                    opacity: 1;
+                    filter: brightness(250%);
                 }
             }
         }
     }
     .form{
+        padding: 120px 0px;
         .box-left{
             width: 59%;
             input{
@@ -319,15 +355,34 @@ export default {
             button{
                 margin-top: 20px;
             }
+            h2{
+                padding: 25px 0px;
+            }
+            p{
+                padding-bottom: 20px;
+            }
         }
         .box-right{
-            width: 39%;
+            width: 34%;
             .box-item{
                 width: 45px;
                 height: 45px;
                 border-radius: 50%;
                 background-color: #daeced;
             }
+            h3{
+                padding-bottom: 15px;
+            }
+            .info{
+                margin-bottom: 20px;
+                p{
+                    padding-left: 13px;
+                }
+                i{
+                    color: #058283;
+                }
+            }
+            
         }
     }
     
