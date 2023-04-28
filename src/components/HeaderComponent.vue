@@ -71,6 +71,13 @@ export default {
         color: #058283;
         border: 2px solid #058283;
     }
+    button:hover{
+        opacity: .5;
+    }
+    .btn:hover{
+        border: 2px solid #058283;
+        opacity: .8;
+    }
     .header-top{
         background-color: #21333e;
         color: #879197;
@@ -119,13 +126,16 @@ export default {
             overflow: hidden;
             .my-container{
                 width: 400px;
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
             }
             p{
                 padding: 20px 0px 40px 0px;
             }
         img{
             width: 100%;
-            position: absolute;
             transform: scale(1.5);
         }
         p{

@@ -57,6 +57,13 @@ export default {
     i{
         padding-right: 10px;
     }
+    button:hover{
+        opacity: .5;
+    }
+    .btn:hover{
+        border: 2px solid #058283;
+        opacity: .8;
+    }
     .list{
         padding-bottom: 6px;
     }

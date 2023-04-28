@@ -30,7 +30,6 @@
                     <p>For 12 years we have been providing audit and warranty, financial advice, eisk advice, taxes and related services to select clients.</p>
                     <div class="d-flex justify-content-between flex-wrap">
                         <div class="my-card" v-for="(item, index) in store.company">
-                            <i :class="item.icon"></i>
                             <h3>{{item.title}}</h3>
                             <p>{{item.par}}</p>
                         </div>
@@ -45,6 +44,12 @@
             <div class="box-right">
                 <img src="../assets/image/about-4.jpg" alt="Company">
             </div>
+        </div>
+        <div class="bullets-top">
+            <img src="../assets/image/bullets.png" alt="">
+        </div>
+        <div class="bullets-bottom">
+            <img src="../assets/image/bullets.png" alt="">
         </div>
     </section>
     <section class="projects">
@@ -189,6 +194,13 @@ export default {
         color: #058283;
         border: 2px solid #058283;
     }
+    button:hover{
+        opacity: .5;
+    }
+    .btn:hover{
+        border: 2px solid #058283;
+        opacity: .8;
+    }
     .main-service{
         background-color: #eef4ed;
         padding: 140px 0px;
@@ -204,9 +216,6 @@ export default {
             }
             h3{
                 padding: 23px 0px;
-            }
-            img{
-                filter: grayscale(100%) brightness(80%) sepia(300%) hue-rotate(50deg) saturate(500%);
             }
         }
         .par-service{
@@ -233,6 +242,33 @@ export default {
     .company{
         color: #fff;
         background-color: #111117;
+        position: relative;
+        .bullets-top{
+            position: absolute;
+            width: 130px;
+            height: 55px;
+            overflow: hidden;
+            top:0;
+            right: 50%;
+            transform: translate(+50%, -50%);
+            img{
+                width: 100%;
+                opacity: .3;
+            }
+        }
+        .bullets-bottom{
+            position: absolute;
+            width: 120px;
+            height: 50px;
+            overflow: hidden;
+            bottom:0;
+            right: 50%;
+            transform: translate(50%, 50%);
+            img{
+                width: 100%;
+                opacity: .3;
+            }
+        }
         h2{
             padding: 30px 0px;
             color: #fff
@@ -336,8 +372,7 @@ export default {
             padding: 100px 0px;
             background-color: #111117;
             .box-image{
-                width: 100px;
-                height: 20px;
+                width: 6%;
                 img{
                     width: 100%;
                     filter: brightness(250%);
