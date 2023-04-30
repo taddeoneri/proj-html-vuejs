@@ -78,6 +78,15 @@ export const store = reactive({
             image: 'project-6.jpg'
         },
     ],
+    projectList: [
+        'All',
+        'Institutional',
+        'Social',
+        'Events',
+        'Innovation',
+        'Enviroment',
+        'Technology'
+    ],
     resultsImage: [
         'logo-4.png',
         'logo-5.png',

@@ -13,7 +13,9 @@
                 <div class="my-card" v-for="(card, index) in store.cards">
                     <div class="d-flex justify-content-between">
                         <img :src="'/images/'+card.icon" alt="">
-                        <i class="fas fa-arrow-right"></i>
+                        <span class="spanService d-flex justify-content-center align-items-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
                     </div>
                     <h3>{{card.name}}</h3>
                     <p>{{card.par}}</p>
@@ -56,18 +58,13 @@
         <div class="container">
             <h4 class="text-uppercase text-center">We do more for everyone</h4>
             <h2 class="text-center">Action & <span>Projects</span></h2>
-            <ul class="text-uppercase d-flex justify-content-between">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Institutional</a></li>
-                <li><a href="#">Social</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Innovation</a></li>
-                <li><a href="#">Enviroment</a></li>
-                <li><a href="#">Technology</a></li>
+            <ul class="text-uppercase d-flex justify-content-between align-items-center">
+                <li v-for="(project, index) in store.projectList" @click.prevent="getIndex(index)" :class="activeIndex === index ? 'active' :''"><a href="#">{{project}}</a></li>
             </ul>
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="my-card" v-for="(card, index) in store.projects">
                     <img :src="'/images/'+card.image" alt="">
+                    <i class="fas fa-arrow-right"></i>
                     <p>{{card.text}}</p>
                 </div>
             </div>
@@ -149,7 +146,13 @@ export default {
     name: 'MainComponent',
     data(){
         return{
-            store
+            store,
+            activeIndex: 0
+        }
+    },
+    methods: {
+        getIndex(index){
+            this.activeIndex = index;
         }
     }
 }
@@ -216,6 +219,19 @@ export default {
             }
             h3{
                 padding: 23px 0px;
+            }
+            .spanService{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: transparent;
+                cursor: pointer;
+            }
+            .spanService:hover{
+                background-color: #7bd1d1;
+                i{
+                    color: #058283;
+                }
             }
         }
         .par-service{
@@ -311,6 +327,16 @@ export default {
         padding: 140px 0px;
         ul{
             padding: 6px 140px;
+            li{
+                padding: 8px;
+                border-radius: 5px;
+            }
+            .active{
+                background-color: #d5e7e8;
+            }
+            li:hover{
+                background-color: #d5e7e8;
+            }
         }
         h2{
             padding: 30px 0px 50px 0px;
@@ -336,7 +362,23 @@ export default {
                 color: #fff;
                 text-align: center;
                 font-size: 1.6rem;
-                padding-bottom: 30px;
+                padding: 30px;
+            }
+            .fa-arrow-right{
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 50px;
+                color: #fff;
+                font-size: 1.7rem;
+                cursor: pointer;
+                transition: opacity .3s linear .1s;
+            }
+        }
+        .my-card:hover{
+            .fa-arrow-right{
+                opacity: 1;
             }
         }
     }

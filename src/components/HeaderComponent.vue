@@ -100,6 +100,9 @@ export default {
         color: #606d75;
         text-transform: uppercase;
     }
+    a:hover{
+         color: #606d75;
+    }
     .box-image{
         width: 140px;
         img{
